@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinus Game - Simulasi Rakit PC</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Pinus Game</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Simulasi</a></li>
+            <li><a href="#">Tentang</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+        <h2>Simulasi Rakit PC</h2>
+
+        <!-- FORM -->
+        <div class="form-card">
+            <label>Budget:</label>
+            <select id="budget">
+                <option value="5000000">gaming 1080p</option>
+                <option value="10000000">gaming 1080p rata kanan</option>
+                <option value="15000000">gaming 2k</option>
+                <option value="20000000">gaming 4k</option>
+            </select>
+
+            <label>GPU:</label>
+            <select id="gpu">
+                <option value="2000000">GTX 1650 (2jt)</option>
+                <option value="3500000">RTX 3050 (3.5jt)</option>
+                <option value="5500000">RTX 4060 (5.5jt)</option>
+                <option value="7500000">RTX 4060 Ti (7.5jt)</option>
+                <option value="9000000">RTX 4070 (9jt)</option>
+                <option value="12000000">RTX 4070 Ti (12jt)</option>
+            </select>
+
+            <label>RAM:</label>
+            <select id="ram">
+                <option value="400000">8GB (400rb)</option>
+                <option value="800000">16GB (800rb)</option>
+                <option value="1500000">32GB (1.5jt)</option>
+            </select>
+
+            <label>SSD:</label>
+            <select id="ssd">
+                <option value="300000">256GB (300rb)</option>
+                <option value="500000">512GB (500rb)</option>
+                <option value="900000">1TB (900rb)</option>
+            </select>
+
+            <label>PSU:</label>
+            <select id="psu">
+                <option value="350000">450W (350rb)</option>
+                <option value="550000">550W (550rb)</option>
+                <option value="850000">650W (850rb)</option>
+                <option value="1200000">750W Gold (1.2jt)</option>
+            </select>
+
+            <button id="addBtn">Tambah Simulasi</button>
+        </div>
+
+        <!-- TABLE -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Budget</th>
+                    <th>Processor</th>
+                    <th>GPU</th>
+                    <th>RAM</th>
+                    <th>SSD</th>
+                    <th>PSU</th>
+                    <th>Total Harga</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <!-- PAYMENT MODAL -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <h3>Pembayaran</h3>
+            <p>Total yang harus dibayar:</p>
+            <h2 id="payTotal"></h2>
+
+            <p>Kode Pembayaran (Barcode):</p>
+            <div class="barcode-box" id="barcodeBox"></div>
+
+            <button onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
